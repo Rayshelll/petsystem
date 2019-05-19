@@ -1,0 +1,52 @@
+<%- include index %>
+        <form name="form3" id="form3" method="post">
+            <table border="0" width="100%" cellpadding="0" cellspacing="0" id="senfe">
+                <tr align="center" valign="middle">
+                    <td colspan="2" class="tt"><%= title %></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td width="20%">昵称</td>
+                    <td><input class="in" name="name" type="text" value="<%= pet.name%>"></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td>种类</td>
+                    <td>
+                        <input name="category" value="狗" type="radio" value=""/>狗狗
+                        <input name="category" value="猫" type="radio" value=""/>猫咪
+                    </td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td>年龄</td>
+                    <td><input class="in" name="age" type="text" value="<%= pet.age%>"></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td>性别</td>
+                    <td>
+                    <input name="sex" value="雄性" type="radio" value=""/>雄性
+                    <input name="sex" value="雌性" type="radio" value=""/>雌性
+                    </td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td>所在地区</td>
+                    <td><input class="in" name="area" type="text" value="<%= pet.area%>"></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td>描述</td>
+                    <td><textarea class="in" name="text" style="height:120px;"  maxlength="500" ><%= pet.text%></textarea></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td colspan="2">
+                        <input class="btn" id="submit" type="submit" value="确定" /> 
+                        <input class="btn" id="reset" type="reset" value="重填"   />  
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="<%= pet._id %>" name="petId" style="display:none;"></td>
+                </tr>
+            </table>
+        </form>
+
+</div>
+</body>
+</html>
+<%- include footer %>

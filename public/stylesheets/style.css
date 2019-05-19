@@ -1,0 +1,158 @@
+
+*{padding: 0px;margin: 0px;}
+
+.ipt{
+	border: 1px solid #eee;
+	padding: 10px 10px;
+	width: 270px;
+	border-radius: 4px;
+	padding-left: 35px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+.ipt:focus{
+	border-color: #7bc0cc;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+.btn{
+	background: #7bc0cc;
+	width: 80px;
+	height: 33px;
+	border-radius: 5px;
+	border-style: none;
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	font-family: "微软雅黑";
+	margin-left: 5px;
+	margin-right: 5px;
+	}
+a{
+	text-decoration: none;
+}
+.title{
+    text-align: center;
+}
+.title p{
+	padding-top: 100px;
+}
+.login_div{
+	background: url(../images/pic/login_bgx.gif);
+	width: 100%;
+}
+.dan{
+	background: url(../images/pic/login_m_bg.png) no-repeat;
+	width: 400px; 
+	height: 400px; 
+	text-align: center;
+	margin: 0 auto;
+}
+.dan h2{
+	padding-top:20px;
+	color:#333;
+}
+.dan1{
+	background: url(../images/pic/regist_m_bg.png) no-repeat;
+	width: 400px; 
+	height: 600px; 
+	text-align: center;
+	margin: 0 auto;
+}
+.dan1 h2{
+	padding-top:20px;
+	color:#333;
+}
+.tip{
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+.textfield{
+	padding: 20px 0px 0;
+	position: relative;
+}
+.banner{
+	width: 100%;
+	height: 217px;
+	background: url(../images/pic/banner1.png) center 0 no-repeat;
+}
+.word{
+	color: #ffffff;
+	font-size: 56px;
+	text-decoration: none;
+	font-family: "微软雅黑";
+}
+.select{
+	width: 240px;
+	height: 160px;
+	float: right;
+	margin-top: 340px;
+	margin-right: 90px;
+}
+.word1{
+	color: #ffffff;
+	font-size: 18px;
+	text-decoration: none;
+	font-family: "微软雅黑";
+}
+/*petinfo*/
+.petinfo{
+    width: 100%;
+    margin-top: 10px;
+	height: 260px;
+}
+.petinfo .petimg{
+	float: left;
+}
+.petinfo .petword{
+	float: right;
+	width: 480px;
+}
+.save{
+    width: 20%;
+    float: right;
+    margin: 0 auto;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+.savelist{
+	margin-top: 20px;
+}
+.savelist span{	
+    background-color: #eee;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    padding: 10px 10px 10px 10px;
+    margin-right: 12px;
+}
+
+/*newsinfo*/
+.news1{
+	float: left;
+    width: 100%;
+    /* margin-top: 40px; */
+    height: 820px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+newslist1{
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden;
+    /* margin-bottom: 20px; */
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 20px;
+    margin-right: 20px;
+}
+/*postinfo*/
+.notices1{
+	width: 80%;
+	margin: 30px auto;
+	height: 360px;
+	overflow: hidden;
+
+}

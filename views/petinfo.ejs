@@ -1,0 +1,33 @@
+<%- include header %>    
+  
+<div class="context2 clearfix">
+    <p style="font-size: 26px; color: #333;padding-top: 10px">“宠物领养中心”</p>
+ <% pets.forEach(function (pet, index) {  %>
+<div class="petinfo">
+    <div class="petimg">
+        <img src="images/<%= pet.picture[0]%>" width="300" height="240">
+    </div>
+    <div class="petword">
+       <p style="font-size: 20px;padding-top: 5px"><span><%= pet.name%></span></p>
+       <p style="line-height: 30px;padding-top: 20px;">我家猫莫大街上电脑，巨大的课程表检查，号地块和丁俊晖，成绩单都护会产生才不呢。</p>
+       <a href="/petdetail/<%= pet._id%>"><span>[查看]</span></a>
+    </div>
+</div>
+<% })%>
+
+</div>
+<!--救助站块-->
+<div class="save">
+    <p class="hr1"><span style="font-size: 20px;">各地救助站</span></p>
+    <div class="savelist">
+        <span><a href="https://site.douban.com/132789/">北京</a></span>
+        <span><a href="#">上海</a></span>
+        <span><a href="#">成都</a></span>
+        <span><a href="#">武汉</a></span>
+        <span><a href="#">重庆</a></span>
+        <span><a href="#">安徽</a></span>
+    </div>     
+</div>
+<!--/救助站块-->
+
+<%- include footer %>

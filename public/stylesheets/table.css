@@ -1,0 +1,171 @@
+.left{
+    width: 240px;
+    float: left;
+
+}
+.left ul{
+	margin-bottom: 20px;
+}
+.left ul li{
+	display: block;
+	list-style: none;
+	text-align: center;
+	font-size: 16px;
+
+}
+.left ul li a{
+	background-color: #7bc0cc;
+	list-style: none;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	width: 180px;
+	height: 30px;
+	padding-bottom: 5px;
+	color: #fff;
+	border-radius: 10px;
+	margin-top: 20px;
+	padding-top: 10px;
+}
+.left ul li a:hover{
+    background: #7bc0cc;
+    list-style: none;
+    display: block;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#senfe { 
+	border-top: #eee 1px solid; 
+	border-left: #eee 1px solid; 
+	margin:0 auto;
+	font-family:"微软雅黑";
+	line-height: 40px;
+	width: 80%;
+	margin-bottom: 20px;
+    /*float: left;*/
+    margin-top: 20px;
+	/*table-layout: fixed;*/
+} 
+#senfe td { 
+	border-right: #eee 1px solid; 
+	border-bottom: #eee 1px solid;
+	border-radius: 1px;
+	font-size:14px;
+	padding:3px 7px 2px 7px; 
+} 
+#con_title{
+	margin:20px 20px 10px 20px;
+}
+#mytable{
+	border-top: #eee 1px solid; 
+	border-left: #eee 1px solid; 
+	margin:0 auto;
+	font-family:"微软雅黑";
+	line-height: 40px;
+	margin-bottom: 20px;
+	width: 80%;
+    /*float: left;*/
+    margin-top: 20px;	
+	table-layout:fixed;/* 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
+}
+#mytable td{
+	border-right: #eee 1px solid; 
+	border-bottom: #eee 1px solid;
+	border-radius: 1px;
+	font-size:14px;
+	padding:3px 7px 2px 7px; 
+	width:100%;
+	word-break:keep-all;/* 不换行 */
+	white-space:nowrap;/* 不换行 */
+	overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+	text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一 起使用。*/
+}
+.tt{
+	font-size:16px; 
+	color: #fff;
+	background-color:   #7bc0cc;
+}
+.fen{
+	text-align: center;
+	margin-bottom: 20px;
+	width: 300px;
+	float: right;
+	margin-right: 325px;
+}
+.fen1{
+	text-align: center;
+	margin-top: 60px;
+}
+.fen2{
+	text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+a{
+	color:#000;
+	text-decoration:none;
+}
+a:hover{
+	color: #7bc0cc;
+	text-decoration:none;
+}
+.text{
+		width:50%;
+	
+}
+.btn{
+	background: #7bc0cc;
+	width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+    /* border: 1px solid rgb(26, 117, 152); */
+    color: #eee;
+    font-size: 14px;
+    /* font-weight: bold; */
+    font-family: "微软雅黑";
+}
+.btn1{
+	background: #7bc0cc;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-style: none;
+    /* border: 1px solid rgb(26, 117, 152); */
+    color: #eee;
+    font-size: 14px;
+    /* font-weight: bold; */
+    font-family: "微软雅黑";
+}
+.btn1 a:hover{
+	color: #eee;
+	text-decoration:none;
+}
+.in{
+  margin:20px auto;
+  box-sizing: border-box;
+  text-align:center;
+  font-size:16px;
+  height:2.0em;
+  border-radius:4px;
+  border:1px solid #c8cccf;
+  color:#6a6f77;
+  -web-kit-appearance:none;
+  -moz-appearance: none;
+  display:block;
+  outline:0;
+  padding:0 1em;
+  text-decoration:none;
+  width:70%;
+  font-family: "微软雅黑";
+}
+input:focus{
+  border:1px solid  #7bc0cc;
+}
+
+textarea:focus{
+	border:1px solid  #7bc0cc;
+}

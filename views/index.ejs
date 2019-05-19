@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<title><%= title %></title>
+<meta name="keywords" content="流浪动物领养，保护关爱流浪动物" />
+<meta name="description" content="流浪动物领养" />
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://localhost:8000/stylesheets/back.css">
+<link rel="stylesheet" href="http://localhost:8000/stylesheets/table.css">
+<link rel="stylesheet" href="http://localhost:8000/stylesheets/sidebar-menu.css">
+
+<style type="text/css">
+.main-sidebar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	min-height: 100%;
+	width: 230px;
+	z-index: 810;
+	background-color: #222d32;
+ }
+
+form {
+	margin: 0;
+}
+textarea {
+	display: block;
+}
+</style>
+</head>
+
+<body style="min-width: 1200px;">
+<div class="l_frame">
+	<aside class="main-sidebar">
+		<section  class="sidebar">
+			<img src="http://localhost:8000/images/pic/admin.png" width="100%" height="140">
+			<ul class="sidebar-menu">
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-pie-chart"></i>
+							<span>用户</span>
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li><a href="/g_users"><i class="fa fa-circle-o"></i> 管理用户</a></li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-dashboard"></i> <span>宠物</span> <i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li><a href="/g_petadd"><i class="fa fa-circle-o"></i> 录入宠物信息</a></li>
+							<li><a href="/g_petmanage"><i class="fa fa-circle-o"></i> 管理宠物信息</a></li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-files-o"></i> <span>申请</span> <i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li><a href="/g_applycheck"><i class="fa fa-circle-o"></i> 审核申请</a></li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-edit"></i> <span>公告</span>
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li><a href="/g_postadd"><i class="fa fa-circle-o"></i> 发布走失公告</a></li>
+							<li><a href="/g_postmanage"><i class="fa fa-circle-o"></i> 管理公告</a></li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-folder"></i> <span>新闻</span>
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li><a href="/g_newsadd"><i class="fa fa-circle-o"></i> 新闻发布</a></li>
+							<li><a href="/g_newsmanage"><i class="fa fa-circle-o"></i> 新闻管理</a></li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-laptop"></i> <span>管理页面</span>
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li><a href="#"><i class="fa fa-circle-o"></i> 上传图片</a></li>
+						</ul>
+					</li>
+					<li><a href="/logout"><i class="fa fa-book"></i> <span>退出系统</span></a></li>
+			</ul>
+			</section>
+	</aside>
+</div>
+<script src="http://localhost:8000/javascripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="http://localhost:8000/javascripts/sidebar-menu.js"></script>
+<script src="http://localhost:8000/editor/kindeditor-min.js"></script>
+<script src="http://localhost:8000/editor/lang/zh_CN.js"></script>
+<script>
+$.sidebarMenu($('.sidebar-menu'))
+</script>
+
+<script>
+	var options = { 
+		uploadJson: '/g_newsadd', //规定服务端处理的路由地址 
+		allowImageUpload : true, //是否允许本地上传图片 
+		items : [ 
+			'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline', 'removeformat', 
+			'|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist', 'insertunorderedlist', '|', 
+			'emoticons', 'image', 'link'], //各种可显示的图标 
+			resizeType:0 //是否可以拖动 
+		}; 
+		KindEditor.ready(function(K) { 
+			window.editor = K.create('#editor', options); 
+		}); 
+</script>
+
+
+<div class="banner">
+    <img src="http://localhost:8000/images/pic/logo.png" width="200px" height="80" style="float: right">
+</div>
+<div class="r_frame">
+    <p><span><a href="/index">首页</a>>><%= title %></span></p>

@@ -1,0 +1,20 @@
+<%- include header %>
+<div class="context1 clearfix" style="width: 1100px;">
+<div class="pic">
+    <%for (var j = 0; j< pet.picture.length; j++) {%>
+        <img alt="" src="http://localhost:8000/images/<%= pet.picture[j]%>">
+    <%}%>
+</div>
+<div class="picdes">
+    <p>昵称：<%= pet.name %></p>
+    <p>种类：<%= pet.category %></p>
+    <p>年龄：<%= pet.age %></p>
+    <p>性别：<%= pet.sex %></p>
+    <p>地区：<%= pet.area %></p>
+    <p>简介：<%= pet.text %></p>
+    <div class="apply">
+    <p><a href="/y_applylist/<%= pet._id%>"><button class="btn1">我要申请</button></a></p>
+    </div>
+</div>
+</div>
+<%- include footer %>

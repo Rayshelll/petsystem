@@ -1,0 +1,80 @@
+<%- include header %>
+<!--轮播图-->
+<div class="scrollPic" id="idTransformView2">
+    <ul class="slider slider2" id="idSlider2">
+        <li><img src="../images/pic/1.jpg"/></li>
+        <li><img src="../images/pic/2.jpg"/></li>
+        <li><img src="../images/pic/3.jpg"/></li>
+        <li><img src="../images/pic/4.jpg"/></li>
+    </ul>
+    <ul class="num" id="idNum2">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<!--context-->
+<div class="context">
+<div class="clearfix">
+    <!--news-->
+    <div class="news">
+        <p class="hr1"><span class="title">新闻动态</span><a href="/newsinfo"><span style="float: right;margin-top: 15px;font-size: 14px;">更多>></span></a></p>
+        <% newposts.forEach(function (newpost, index) {  %>
+        <div class="newslist">
+            <img src="http://localhost:8000/images/<%= newpost.picture%>"><div class="newswords"><p><span><%= newpost.title%></span></p><a href="/newsdetail/<%= newpost._id%>"><%= newpost.introduce%></a><span>[<%= newpost.time.day %>]</span></div>
+        </div>
+        <% })%>
+    </div>
+
+<!--/news-->
+<!--notices-->
+<div class="notices">
+    <p class="hr1"><span class="title">宠物走失消息</span><a href="/lostinfo"><span style="float: right;margin-top: 15px;">更多>></span></a></p>
+    <div class="newslist home-ct1">
+        <ul class="m-ul1">
+        <% posts.forEach(function (post, index) {  %>
+            <li><a href="/lostdetail/<%= post._id%>"><%= post.title %></a><span>[<%= post.time.day %>]</span></li>
+            <% })%>
+        </ul>
+    </div>     
+</div>
+    <!--/notices-->
+<!--knowledges-->
+<div class="notices">
+    <p class="hr1"><span class="title">养宠物须知</span><span style="float: right;margin-top: 15px;">更多>></span></p>
+    <div class="newslist home-ct1">
+        <ul class="m-ul1">
+        <% posts.forEach(function (post, index) {  %>
+            <li><a href="/lostdetail/<%= post._id%>"><%= post.title %></a><span>[<%= post.time.day %>]</span></li>
+            <% })%>
+        </ul>
+    </div>     
+</div>
+<!--/knowledges-->
+
+</div>
+<div class="activity">
+    <a href="http://www.petday.com.cn/" target="_blank">
+        <img src="http://localhost:8000/images/pic/activity.gif" width="100%">
+    </a>
+</div>
+<div class="h"><p>最新领养信息</p></div>
+<div class="info clearfix">
+    <% pets.forEach(function (pet, index) { 
+    if (index < 4 ) { %>
+        <div class="img">
+            <img src="images/<%= pet.picture[0]%>" alt="Ballade" width="260" height="240">
+            <a href="petdetail/<%= pet._id %>" style="padding-top: 20px"><%= pet.name%></a>
+            <p>sfsdfdfdsgdsgdsgdgfgwfrerewrfewrfewrfewrewrewfg</p>
+        </div>
+    <% }
+    }) 
+    if (pets.length > 4) {%>
+       
+   <%}%>
+</div>
+
+</div>
+<!--/context-->
+<%- include footer_h %>

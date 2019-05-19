@@ -1,0 +1,59 @@
+<%- include g_header %>
+ <div class="context1">
+        <form name="form3" id="form3" method="post">
+            <table border="0" width="100%" cellpadding="0" cellspacing="0" id="senfe" style="margin-left: 110px;margin-right: 110px;">
+                <tr align="center" valign="middle">
+                    <td colspan="2" class="tt"><%= title %></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td width="20%">用户名</td>
+                    <td><%= user.name%></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td width="20%">邮箱</td>
+                    <td><p><%= user.email%></p></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td width="20%">真实姓名</td>
+                    <td><p><%= user.tname%></p></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td>电话</td>
+                    <td><p><%= user.phone%></p></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td>住址</td>
+                    <td><p><%= user.address%></p></td>
+                </tr><tr align="center" valign="middle">
+                    <td>月薪</td>
+                    <td><p><%= user.salary%></p></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td>是否养过宠物</td>
+                    <td><p><%= user.adopt%></p></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td>备注</td>
+                    <td><p><%= user.text%></p></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td>审核</td>
+                    <td>
+                    <select name="state"> 
+                    <option value="审核通过">审核通过</option> 
+                    <option value="审核中">审核中</option> 
+                    <option value="审核不通过">审核不通过</option> 
+                    </select> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center" valign="middle" style="height: 80px">
+                    <input class="btn" id="submit" type="submit" value="确定" /> 
+                    <a href="/checkapply" class="btn" style="display: inline-block;">取消</a>
+                </td>
+                </tr>
+            </table>
+        </form>
+
+</div>
+<%- include footer %>

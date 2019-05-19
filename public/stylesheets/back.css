@@ -1,0 +1,14 @@
+.l_frame{
+    float: left;
+    width: 230px;
+    min-height: 480px;
+}
+.banner{
+    width: 100%;
+    background-color: #222d32;
+    height: 80px;
+}
+.r_frame{
+    margin-left: 230px;
+    min-height: 480px;
+}

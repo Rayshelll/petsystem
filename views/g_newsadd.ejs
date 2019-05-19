@@ -1,0 +1,36 @@
+<%- include index %>
+ <form name="form3" id="form3" method="post" enctype="multipart/form-data">
+            <table border="0" width="100%" cellpadding="0" cellspacing="0" id="senfe">
+                <tr align="center" valign="middle">
+                    <td colspan="2" class="tt"><%= title %></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td width="20%">标题</td>
+                <td><input class="in" name="title" type="text"></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td width="20%">摘要</td>
+                <td><input class="in" name="introduce" type="text"></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td>上传图片</td>
+                    <td>
+                    <input name="picture" value="" type="file" value=""/>
+                    </td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td>描述</td>
+                    <td><textarea name="text" id="editor" style="width:700px;height:200px;visibility:hidden;"></textarea></td>
+                </tr>
+                
+                <tr align="center" valign="middle">
+                    <td colspan="2" style="height: 80px">
+                    <input class="btn" type="submit" value="确定" name="sure" /> 
+                    <input class="btn" type="reset" value="重填"   />  
+                </td>
+                </tr>
+            </table>
+        </form>
+</div>
+</body>
+</html>

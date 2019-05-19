@@ -1,0 +1,67 @@
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html 
+xmlns="http://www.w3.org/1999/xhtml"><head><meta content="ie=11.0000" 
+http-equiv="x-ua-compatible">
+<meta name="generator" content="mshtml 11.00.9600.17496">
+<meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+<title><%= title %></title> 
+<link rel="stylesheet" href="stylesheets/style.css">
+
+<script language="javascript">
+function check(){
+	if(frm.name.value.length==0 && frm.password.value.length==0){
+		alert("请输入用户名和密码！");
+		frm.code.focus();
+		return false;
+	}
+	if(frm.name.value.length==0){
+		alert("请输入用户名");
+		frm.code.focus();
+		return false;
+	}
+	if(frm.password.value.length==0){
+		alert("请输入密码！");
+		frm.code.focus();
+		return false;
+	}
+	if(frm.repassword.value.length==0){
+		alert("请确认密码！");
+		frm.code.focus();
+		return false;
+	}
+	if(frm.email.value.length==0){
+		alert("请输入邮箱！");
+		frm.code.focus();
+		return false;
+	}
+}
+frm.submit();
+</script>
+
+
+</head> 
+<body class="login_div">
+	<div class="title">
+		<img src="../images/pic/logo.png" width="400">
+	</div>   
+	<div class="dan1">
+		<form id="frm" method="post">
+			<h2>Regist</h2>
+			<p class="textfield">     
+				<input class="ipt" id="name" type="text" name="name" placeholder="请输入用户名" value=""> 
+			</p>
+			<p class="textfield">       
+				<input class="ipt" id="password" name="password" type="password" placeholder="请输入密码" value="">   
+			</p>
+			<p class="textfield">       
+				<input class="ipt" id="repassword" name="repassword" type="password" placeholder="请确认密码" value="">   
+			</p> 
+		<div style="margin-top: 20px;">
+			<p style="padding: 20px 0px 0px; position: relative;">
+				<input name="regist" id="regist" type="submit" value="注 册" class="btn" onclick="check()"/> 
+			</p>   
+		</form>
+	</div>
+     </body>
+</html>
+

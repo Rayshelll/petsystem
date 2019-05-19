@@ -1,0 +1,83 @@
+<%- include header %>
+<div class="context clearfix"> 
+    <div class="left">
+        <div>
+            <img src="http://localhost:8000/images/<%= user.picture%>" width="200" height="200">
+        </div>
+        <div style="margin-left: 10px;">
+        <ul>
+            <li><a href="/y_personcom">完善信息</a></li>
+            <li><a href="/y_person">修改密码</a></li>
+            <li><a href="/y_personapply">我的申请</a></li>
+            <li><a href="/y_postadd">宠物走失信息发布</a></li>
+        </ul> 
+        </div>  
+    </div>
+     <script language="javascript">
+function check(){
+	if(form3.pictrue.value.length==0){
+		alert("请上传头像！");
+		form3.code.focus();
+		return false;
+	}
+
+
+}
+form3.submit();
+</script>
+
+ <form name="form3" id="form3" method="post" enctype="multipart/form-data">
+    <table border="0" width="100%" cellpadding="0" cellspacing="0" id="senfe">
+        <tr align="center" valign="middle">
+            <td colspan="2" class="tt">完善信息</td>
+        </tr>
+        <tr align="center" valign="middle">
+            <td width="20%">用户名</td>
+        <td><input class="in" id="tname" name="tname" type="text" value="<%= user.name%>" disabled></td>
+        </tr>
+        <tr align="center" valign="middle">
+            <td>上传头像</td>
+            <td>
+            <input name="picture" id="pictrue" value="" type="file" placeholder="请上传头像！" value=""/>
+            </td>
+        </tr>
+        <tr align="center" valign="middle">
+            <td width="20%">邮箱</td>
+        <td><input class="in" id="tname" name="tname" type="text" value="<%= user.email%>"></td>
+        </tr>
+        <tr align="center" valign="middle">
+            <td width="20%">真实姓名</td>
+        <td><input class="in" id="tname" name="tname" type="text" placeholder="请填写真实姓名！" value="<%= user.tname%>"></td>
+        </tr>
+        <tr align="center" valign="middle">
+            <td>电话</td>
+            <td><input class="in" id="phone" name="phone" type="text" placeholder="请填写电话！" value="<%= user.phone%>"></td>
+        </tr>
+        <tr align="center" valign="middle">
+            <td>住址</td>
+            <td><input class="in" id="address" name="address" type="text" placeholder="请填写地址！" value="<%= user.address%>"></td>
+        </tr><tr align="center" valign="middle">
+            <td>月薪</td>
+            <td><input class="in" id="salary" name="salary" type="text" placeholder="请填写月薪！" value="<%= user.salary%>"></td>
+        </tr>
+        <tr align="center" valign="middle">
+            <td>是否养过宠物</td>
+            <td>
+            <input name="adopt" value="是" type="radio" value=""/>是
+            <input name="adopt" value="否" type="radio" value=""/>否
+            </td>
+        </tr>
+        <tr align="center" valign="middle">
+            <td>备注</td>
+            <td><textarea style="height:120px" class="in" id="text" name="text" type="text" maxlength="500"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" valign="middle" style="height: 80px">
+            <input class="btn" id="submit" type="submit" onclick="check()" value="确定" /> 
+            <input class="btn" id="reset" type="reset" value="重填"   />  
+        </td>
+        </tr>
+    </table>
+</form>
+</div>
+<%- include footer %>

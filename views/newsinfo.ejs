@@ -1,0 +1,42 @@
+<%- include header %>
+<div class="banner"></div>
+<div class="context1 clearfix">
+    <p style="font-size: 26px; color: #333;padding-top: 10px">“宠物新闻动态”</p>
+ <!--news-->
+    <div class="news" style="width: 100%;margin-top: 20px;">
+        <% newposts.forEach(function (newpost, index) {  %>
+            <div class="newslist">
+                <img src="http://localhost:8000/images/<%= newpost.picture%>"><div class="newswords"><p><span><%= newpost.title%></span></p><a href="/newsdetail/<%= newpost._id%>"><%= newpost.introduce%></a><span>[<%= newpost.time.day %>]</span></div>
+            </div>
+        <% })%>
+        <div>
+            <p style="text-align: center"><a href=""><button class="duobtn" style="width: 100%;"> 查看更多+</button></a></p>
+        </div>
+    <div class="fen1" style="margin-top: 0px;">
+        <% if (!isFirstPage) { %>
+        <a href="?p=<%= 1 %>" title="">首 页</a>/
+        <a href="?p=<%= page-1 %>" title="上一页">上一页</a>/
+        <% } %>
+        <% if (!isLastPage) { %>
+        <a href="?p=<%= page+1 %>" title="下一页">下一页</a>/
+        <a href="?p=<%= Math.ceil(total/10) %>">末 页</a>
+        <% } %>
+        <span>第<%= page %>页/共<%= Math.ceil(total/10) %>页</span>
+    </div>
+</div>
+    </div>
+
+<!--/news-->
+<!--notices-->
+<div class="notices" style="margin-right: 100px;">
+    <p class="hr1"><span class="title">宠物走失消息</span><a href="/lostinfo"><span style="float: right;margin-top: 15px;">更多>></span></a></p>
+    <div class="newslist home-ct1">
+        <ul class="m-ul1">
+        <% posts.forEach(function (post, index) { %>
+            <li><a href="/lostdetail/<%= post._id%>"><%= post.title %></a><span>[<%= post.time.day %>]</span></li>
+            <% })%>
+        </ul>
+    </div>     
+</div>
+    <!--/notices-->
+<%- include footer %>

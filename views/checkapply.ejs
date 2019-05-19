@@ -1,0 +1,43 @@
+<%- include g_header %>
+<div class="context1">
+    <div class=""> 
+        <table width="700" border="0" cellpadding="0" cellspacing="0" id="mytable" style="margin-left: 110px;margin-right: 110px;"> 
+            <thead>
+                <tr align="center" valign="middle">
+                    <td colspan="5" class="tt"><%= title %></td>
+                <tr>
+                <tr align="center" valign="middle"> 
+                    <td>申请用户名</td> 
+                    <td>申请动物编号</td> 
+                    <td>申请时间</td> 
+                    <td>申请状态</td> 
+                    <td>操作</td> 
+                </tr> 
+            </thead> 
+        <tbody id="group_one"> 
+            <% applys.forEach(function (apply, index) { %> 
+            <tr align="center" valign="middle"> 
+                <td><%= apply.username %></td> 
+                <td><%= apply.petid %></td>
+                <td><%= apply.time.minute %> </td>  
+                <td><%= apply.state %> </td>
+                <td><a href="/applydetail/<%= apply.username%>/<%= apply.petid%>">查看申请详情</a></td>
+            </tr> 
+             <% }) %>
+        </tbody> 
+    </table>
+    </div> 
+    <div class="fen" style="margin-right: 455px;">
+        <% if (!isFirstPage) { %>
+        <a href="?p=<%= 1 %>" title="">首 页</a>/
+        <a href="?p=<%= page-1 %>" title="上一页">上一页</a>/
+        <% } %>
+        <% if (!isLastPage) { %>
+        <a href="?p=<%= page+1 %>" title="下一页">下一页</a>/
+        <a href="?p=<%= Math.ceil(total/8) %>">末 页</a>
+        <% } %>
+        <span>第<%= page %>页/共<%= Math.ceil(total/8) %>页</span>
+    </div>   
+</div>
+
+<%- include footer %>

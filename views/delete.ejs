@@ -1,0 +1,52 @@
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd"><html 
+xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta content="ie=11.0000" http-equiv="x-ua-compatible">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+	<title><%= title%></title> 
+	<style>
+	*{padding: 0px;margin: 0px;}
+	body{
+		min-width: 1200px;
+		min-height: 400px;
+	}
+	.t1{
+		width: 400px;
+		margin: 0 auto;
+		height: 220px;
+		margin-top: 140px;
+		background-color: #eee;
+		border-radius: 5px;
+	}
+	.t1 form{
+		text-align: center;
+    	padding-top: 60px;
+	}
+	.t1 p{
+		padding-bottom: 20px;
+		font-size: 18px;
+		font-family: "helvetica neue","hiragino sans gb","microsoft yahei","\9ed1\4f53",arial,sans-serif;
+	}
+	.btn{
+		background: #488d9a;
+		width: 80px;
+		height: 30px;
+		border-radius: 5px;
+		border-style: none;
+		color: #fff;
+		font-size: 14px;
+		font-family: "helvetica neue","hiragino sans gb","microsoft yahei","\9ed1\4f53",arial,sans-serif;
+	}
+	</style>
+</head> 
+<body>
+    <div class="t1">
+	    <form name="form3" id="form3" method="post">
+	    	<p>确认删除这条信息吗？</p>
+	        <input class="btn" id="submit" name="sure" type="submit" value="确定" /> 
+			<a href="/managepet" class="btn"><input class="btn" id="submit" name="sure" type="submit" value="取消" /></a>
+	    </form>
+    </div>  
+</body>
+</html>
+

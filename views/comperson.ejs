@@ -1,0 +1,17 @@
+<%- include header %>
+<div class="context1 clearfix"> 
+    <div class="left">
+        <div style="margin-top: 20px;">
+            <img src="http://localhost:8000/images/<%= user.picture%>" width="200" height="200">
+        </div>
+        <div style="margin-left: 10px;">
+        <ul>
+            <li><a href="/comperson">完善信息</a></li>
+            <li><a href="/person">修改密码</a></li>
+            <li><a href="/myapply">我的申请</a></li>
+        </ul> 
+        </div>  
+    </div>
+       <%- include comperson_t %>
+</div>
+<%- include footer_h %>

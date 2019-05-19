@@ -1,0 +1,36 @@
+<%- include index %>
+        <table width="700" border="0" cellpadding="0" cellspacing="0" id="mytable"> 
+            <thead>
+                <tr align="center" valign="middle">
+                    <td colspan="3" class="tt"><%= title %></td>
+                <tr>
+                <tr align="center" valign="middle"> 
+                    <td>用户名</td> 
+                    <td>注册时间</td> 
+                    <td>维护操作</td> 
+                </tr> 
+            </thead> 
+        <tbody id="group_one">
+            <% users.forEach(function (user, index) { %>    
+            <tr align="center" valign="middle"> 
+                <td><%= user.name %></td> 
+                <td><%= user.time.minute %></td>  
+                <td><a href="/delete/d/<%= user._id%>">删除</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr> 
+            <% }) %> 
+        </tbody> 
+    </table>   
+	<div class="fen">
+        <% if (!isFirstPage) { %>
+        <a href="?p=<%= 1 %>" title="">首 页</a>/
+        <a href="?p=<%= page-1 %>" title="上一页">上一页</a>/
+        <% } %>
+        <% if (!isLastPage) { %>
+        <a href="?p=<%= page+1 %>" title="下一页">下一页</a>/
+        <a href="?p=<%= Math.ceil(total/8) %>">末 页</a>
+        <% } %>
+        <span>第<%= page %>页/共<%= Math.ceil(total/8) %>页</span>
+    </div>
+</div>
+</body>
+</html>

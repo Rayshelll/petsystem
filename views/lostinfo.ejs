@@ -1,0 +1,29 @@
+<%- include header %>
+<div class="banner"></div>
+<div class="context clearfix">
+<!--notices-->
+    <div class="notices1" style="margin-right: 100px;">
+        <p class="hr1" style="font-size: 20px;"><span class="title">“宠物走失信息”</span></p>
+        <div class="newslist home-ct1">
+            <ul class="m-ul1">
+            <% posts.forEach(function (post, index) { 
+            if (index < 10 ) { %>
+                <li><a href="/lostdetail/<%= post._id%>"><%= post.title %></a><span>[<%= post.time.day %>]</span></li>
+                <% } })%>
+            </ul>
+        </div>     
+    </div>
+        <div class="fen1" style="margin-top: 0px;">
+            <% if (!isFirstPage) { %>
+            <a href="?p=<%= 1 %>" title="">首 页</a>/
+            <a href="?p=<%= page-1 %>" title="上一页">上一页</a>/
+            <% } %>
+            <% if (!isLastPage) { %>
+            <a href="?p=<%= page+1 %>" title="下一页">下一页</a>/
+            <a href="?p=<%= Math.ceil(total/8) %>">末 页</a>
+            <% } %>
+            <span>第<%= page %>页/共<%= Math.ceil(total/8) %>页</span>
+    </div>
+</div>
+<!--/notices-->
+<%- include footer %>

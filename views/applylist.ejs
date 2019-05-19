@@ -1,0 +1,44 @@
+<%- include header %>
+<div class="context1 clearfix"> 
+        <form name="form3" id="form3" method="post">
+            <table border="0" width="100%" cellpadding="0" cellspacing="0" id="mytable" style="margin-left: 110px;margin-right: 110px;">
+                <tr align="center" valign="middle">
+                    <td colspan="2" class="tt">申请确认表</td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td width="20%">用户名</td>
+                <td><%= user.name%></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td width="20%">申请动物编号</td>
+                <td><%= pet._id%></td>
+                <tr align="center" valign="middle">
+                    <td width="20%">名字</td>
+                <td><%= pet.name%></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td width="20%">种类</td>
+                <td><%= pet.category%></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td width="20%">年龄</td>
+                <td><%= pet.age%></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td width="20%">动物性别</td>
+                <td><%= pet.sex%></td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td width="20%">动物所在地区</td>
+                <td><%= pet.area%></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center" valign="middle" style="height: 80px">
+                    <input class="btn" id="submit" type="submit" value="确定" /> 
+                    <a href="/"><input class="btn" id="reset" type="reset" value="取消" />  </a>
+                </td>
+                </tr>
+            </table>
+        </form>
+</div>
+<%- include footer_h %>

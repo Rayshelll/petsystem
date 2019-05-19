@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><%= title %></title>
+<meta name="keywords" content="流浪动物领养，保护关爱流浪动物" />
+<meta name="description" content="流浪动物领养" />
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="stylesheet" href="http://localhost:8000/stylesheets/page.css">
+<link rel="stylesheet" href="http://localhost:8000/stylesheets/style.css">
+<link rel="stylesheet" href="http://localhost:8000/stylesheets/table.css">
+</head> 
+<body>
+<!--header-->
+<div class="header">
+    <div><img src="http://localhost:8000/images/pic/logo.png" alt="logo"></div>
+    <div class="nav">
+    	<ul class="clearfix">
+    		<li><a href="/">首页</a></li>
+            <li><a href="/newsinfo">新闻动态</a></li>
+    		<li><a href="/petinfo">领养中心</a></li>
+            <li><a href="/y_personcom">个人中心</a></li>
+            <li><a href="/about">宠物百科</a></li>  
+            <li><a href="/aboutus">关于我们</a></li>   
+    	</ul>
+    </div>
+    <div class="login">
+        <p class="hhtext">    
+        <% if (user) { %>
+        <a title="注销" href="/logout">注销</a>
+        <% } else { %>
+        <a title="登录" href="/login">登录</a>
+        <a title="注册" href="/regist">注册</a>
+        <% } %>
+    </div>
+</div>
+<!--/header--> 
